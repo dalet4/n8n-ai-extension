@@ -1,0 +1,16 @@
+{
+  "name": "n8n-ai-assistant",
+  "version": "0.1.0",
+  "description": "AI-powered assistant for N8N workflows with visual enhancements",
+  "main": "index.js",
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "credentials/OpenAiApi.js",
+      "credentials/OpenRouterApi.js"
+    ],
+    "nodes": [
+      "nodes/N8nAiAssistant.js"
+    ]
+  }
+}
