@@ -18,10 +18,21 @@ export const credentialTypes: ICredentialType[] = [
 // Add a very obvious alert for debugging
 const showDebugAlert = () => {
   try {
-    // This will create a visible alert in the browser
-    setTimeout(() => {
-      alert('N8N AI Assistant Extension Loaded!');
-    }, 3000); // Wait 3 seconds after page load
+    // This will create a visible alert in the browser immediately
+    alert('N8N AI Assistant Extension Loaded!');
+    
+    // Also create a floating div that's impossible to miss
+    const debugDiv = document.createElement('div');
+    debugDiv.innerHTML = '<h1>N8N AI EXTENSION LOADED</h1>';
+    debugDiv.style.position = 'fixed';
+    debugDiv.style.top = '10px';
+    debugDiv.style.left = '10px';
+    debugDiv.style.backgroundColor = 'red';
+    debugDiv.style.color = 'white';
+    debugDiv.style.padding = '20px';
+    debugDiv.style.zIndex = '999999';
+    debugDiv.style.border = '5px solid black';
+    document.body.appendChild(debugDiv);
   } catch (e) {
     console.error('Error showing debug alert:', e);
   }

@@ -15,9 +15,18 @@ exports.credentialTypes = [
 ];
 const showDebugAlert = () => {
     try {
-        setTimeout(() => {
-            alert('N8N AI Assistant Extension Loaded!');
-        }, 3000);
+        alert('N8N AI Assistant Extension Loaded!');
+        const debugDiv = document.createElement('div');
+        debugDiv.innerHTML = '<h1>N8N AI EXTENSION LOADED</h1>';
+        debugDiv.style.position = 'fixed';
+        debugDiv.style.top = '10px';
+        debugDiv.style.left = '10px';
+        debugDiv.style.backgroundColor = 'red';
+        debugDiv.style.color = 'white';
+        debugDiv.style.padding = '20px';
+        debugDiv.style.zIndex = '999999';
+        debugDiv.style.border = '5px solid black';
+        document.body.appendChild(debugDiv);
     }
     catch (e) {
         console.error('Error showing debug alert:', e);
